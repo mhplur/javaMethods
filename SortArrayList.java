@@ -46,6 +46,6 @@ public class Main {
 		Random r = new Random();
 		int low = 1;
 		int high = 40;
-		return r.nextInt(high - low) + low;
+		return r.nextInt(high) + low;
 	}
 }
