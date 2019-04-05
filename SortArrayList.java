@@ -10,16 +10,15 @@ public class Main {
 	private static List<Integer> listaOrdenada = new ArrayList<Integer>();
 
 	public static void main(String args[]) {
-		for (int i = 0; i <= 34; i++) {
+		for (int i = 0; i <= 100; i++) {
 			listaNumero.add(generarAleatorio());
 		}
 
-		System.out.println("Lista Original:");
-		imprimirArray(listaNumero);
+		imprimirArray("Lista Original:", listaNumero);
 
 		int numLista = listaNumero.size();
 
-		while (listaOrdenada.size() != numLista) {
+		while (listaOrdenada.size() != numLista)
 			for (int i = 0; i <= listaNumero.size() - 1; i++) {
 				int contadorMenor = 0;
 				for (int j = 0; j <= listaNumero.size() - 1; j++)
@@ -31,14 +30,13 @@ public class Main {
 					listaNumero.remove(listaNumero.get(i));
 				}
 			}
-		}
 
 		System.out.println();
-		System.out.println("Lista Ordenada:");
-		imprimirArray(listaOrdenada);
+		imprimirArray("Lista Ordenada:", listaOrdenada);
 	}
 
-	private static void imprimirArray(List<Integer> lista) {
+	private static void imprimirArray(String titulo, List<Integer> lista) {
+		System.out.println(titulo);
 		for (Integer numero : lista)
 			System.out.print(numero + " ");
 	}
@@ -46,7 +44,7 @@ public class Main {
 	private static int generarAleatorio() {
 		Random r = new Random();
 		int low = 1;
-		int high = 50;
+		int high = 40;
 		return r.nextInt(high - low) + low;
 	}
 }
