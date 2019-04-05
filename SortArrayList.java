@@ -28,6 +28,7 @@ public class Main {
 				if (contadorMenor == listaNumero.size()) {
 					listaOrdenada.add(listaNumero.get(i));
 					listaNumero.remove(listaNumero.get(i));
+					break;
 				}
 			}
 
