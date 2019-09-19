@@ -17,9 +17,8 @@ public class Main {
         int anios = fechaFinalCalendar.get(Calendar.YEAR) - fechaInicialCalendar.get(Calendar.YEAR);
         if (mesFechaInicial > mesFechaFinal ||
                 (mesFechaInicial == mesFechaFinal &&
-                        fechaInicialCalendar.get(Calendar.DATE) > fechaFinalCalendar.get(Calendar.DATE))) {
+                        fechaInicialCalendar.get(Calendar.DATE) > fechaFinalCalendar.get(Calendar.DATE))) 
             anios--;
-        }
         return anios;
     }
 
